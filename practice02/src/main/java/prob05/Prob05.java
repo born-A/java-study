@@ -9,7 +9,7 @@ public class Prob05 {
 		Scanner scanner = new Scanner( System.in );
 		
 		
-		while( true ) {
+		while( true) {
 			Random random = new Random();
 			int correctNumber = random.nextInt( 100 ) + 1;
 			int min = 1;
@@ -18,8 +18,7 @@ public class Prob05 {
 			System.out.println("수를 결정하였습니다. 맞추어 보세요.");
 			System.out.println(min + "-" + max);
 			
-			while(true) {
-				
+			while(true) {	
 				System.out.print(count + ">>");
 				
 				count++;
@@ -45,8 +44,6 @@ public class Prob05 {
 						break;
 					}
 				}
-				
-				
 			}
 		}
 	}
