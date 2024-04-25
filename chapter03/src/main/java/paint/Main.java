@@ -27,6 +27,24 @@ public class Main {
 		draw(new Rectangle());
 		draw(new Circle());
 		draw(new GraphicText("Hello World"));
+		
+		//instanceof 연산자 
+		Circle c = new Circle();
+		System.out.println(c instanceof Circle);
+		System.out.println(c instanceof Shape);
+		System.out.println(c instanceof Object);
+		
+		//오류 : 연산자 우측항이 클래스인 경우,
+		// 		레퍼런스하고 있는 class 타입의 hierachy 상의 하위 상위
+		// 		instanceof 연산자를 사용할 수 있다.
+		// System.out.println(c instanceof Point);
+		
+		Object o = new Circle();
+		System.out.println(o instanceof String);
+		
+		// 연산자 우측항이 인터페이스인 경우
+		// Hieracht 상관 없이 instanceof 연산자를 사용할 수 있다.
+		System.out.println();
 	}
 	
 	private static void draw(Drawable drawable) {
@@ -53,4 +71,6 @@ public class Main {
 //		rectangle.draw();
 //	}
 
+	
+	
 }
