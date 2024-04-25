@@ -17,11 +17,16 @@ public class TV {
 
 	public void power(boolean b) {
 		this.power = b;
-		
 	}
 
 	public void volume(int i) {
-		this.volume = i;		
+		if(i >= 1 && i <= 255) {
+			this.volume = i;
+		} else if(i < 0) {
+			this.volume = 1;
+		} else {
+			this.volume = 255;
+		}		
 	}
 
 	public void volume(boolean b) {
@@ -31,6 +36,7 @@ public class TV {
 			this.volume++;
 		}
 		
+		volume(this.volume);
 	}
 
 	public void channel(boolean b) {
@@ -39,11 +45,30 @@ public class TV {
 		} else {
 			this.channel++;
 		}
-		
+		channel(this.channel);
 	}
 
 	public void channel(int i) {
-		this.channel = i;
-		
+		if(i >= 0 && i <= 100) {
+			this.channel = i;
+		} else if(i < 0) {
+			this.channel = 0;
+		} else {
+			this.channel = 100;
+		}
 	}
+
+	public int getVolume() {
+		return volume;
+	}
+
+	public int getChannel() {
+		return channel;
+	}
+
+	public boolean isPower() {
+		return power;
+	}
+	
+	
 }
