@@ -11,10 +11,12 @@ public class ObjectTest02 {
 		System.out.println(p2 == p3);
 		
 		//equals : 두 객체의 동질성(내용 비교)
+		//			부모 클래스 Object의 기본 구현은 동일성(==) 비교와 같다. -> equals 를 오버라이드 해줘야
 		/*public boolean equals(Object obj) {
         return (this == obj);  동일성 비교가 되어있기 때문*/
 		System.out.println(p1.equals(p2));
 		System.out.println(p2.equals(p3));
+		
 	}
 
 }
